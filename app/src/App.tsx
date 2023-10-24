@@ -9,15 +9,20 @@ function App() {
     const obj: ITodo = {
       text: str,
       id: new Date().getTime(),
+      isdone: false,
     };
     setTodos((prev) => [...prev, obj]);
+  }
+  function onDelete(id: any) {
+    const updatedTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(updatedTodos);
   }
 
   return (
     <div>
-      <h1>my todos</h1>
+      <h1>My Todos</h1>
       <AddTodo onTodoAdd={onTodoAdd} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} onDelete={onDelete} />
     </div>
   );
 }
