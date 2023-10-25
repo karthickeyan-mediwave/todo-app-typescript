@@ -47,7 +47,7 @@ const TodoList: React.FC<ITodoList> = ({
                 onChange={(e) => handleCheck(e, t.id)}
               />
               <span
-                className="px-3"
+                className=""
                 style={t.isDone ? { textDecoration: "line-through" } : {}}
               >
                 {t.text}

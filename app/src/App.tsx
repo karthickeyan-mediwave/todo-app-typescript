@@ -52,8 +52,8 @@ function App() {
     setTodos(newTodos);
   }
   return (
-    <div className="container m-4">
-      <h1 className="mb-4">My Todos</h1>
+    <div className="">
+      <h1 className="todo-title">My Todos</h1>
       <AddTodo onTodoAdd={onTodoAdd} />
       <TodoList
         todos={todos}
@@ -67,3 +67,15 @@ function App() {
 }
 
 export default App;
+
+// const updatelike = (id) => {
+//   if (editText !== "") {
+//     const updatedlikes = likes.map((like) =>
+//       like.id === id ? { ...like, text: editText } : like
+//     );
+
+//     setlikes(updatedlikes);
+//     setEditIndex();
+//     setEditText("");
+//   }
+// };

@@ -15,7 +15,6 @@ const EditTodo: React.FC<IEditTodo> = ({ item, handleSave }) => {
         onSubmit={() => handleSave(item.id, editValue)}
       >
         <input
-          id={`text-${item.id}`}
           type="text"
           placeholder={item.text}
           value={editValue}
