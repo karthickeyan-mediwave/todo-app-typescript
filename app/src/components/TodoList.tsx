@@ -43,8 +43,6 @@ const TodoList: React.FC<ITodoList> = ({
             <div className="todolist">
               <input
                 type="checkbox"
-                // name={t.text}
-                id={`text-${t.id}`}
                 checked={t.isDone}
                 onChange={(e) => handleCheck(e, t.id)}
               />
@@ -55,10 +53,10 @@ const TodoList: React.FC<ITodoList> = ({
                 {t.text}
               </span>
               <div>
-                <button className="" onClick={() => handleEdit(t.id)}>
+                <button className="edit-btn" onClick={() => handleEdit(t.id)}>
                   Edit
                 </button>
-                <button className="" onClick={() => handleDelete(t.id)}>
+                <button className="del-btn" onClick={() => handleDelete(t.id)}>
                   Delete
                 </button>
               </div>

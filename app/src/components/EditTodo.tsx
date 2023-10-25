@@ -10,7 +10,10 @@ const EditTodo: React.FC<IEditTodo> = ({ item, handleSave }) => {
 
   return (
     <>
-      <form className="" onSubmit={() => handleSave(item.id, editValue)}>
+      <form
+        className="edit-form"
+        onSubmit={() => handleSave(item.id, editValue)}
+      >
         <input
           id={`text-${item.id}`}
           type="text"
@@ -21,7 +24,7 @@ const EditTodo: React.FC<IEditTodo> = ({ item, handleSave }) => {
           }}
           required
         />
-        <button className="btn btn-outline-secondary btn-sm">Update</button>
+        <button className="update-btn">Update</button>
       </form>
     </>
   );

@@ -18,3 +18,27 @@ h1 {
   border: none;
   border-radius: 5px;
 }
+.del-btn {
+  margin: 5px;
+  border: navajowhite;
+  background: #cf2724;
+  color: white;
+  border-radius: 4px;
+}
+.edit-btn {
+  margin: 5px;
+  border: navajowhite;
+  background: green;
+  color: white;
+  border-radius: 4px;
+}
+.edit-form {
+  margin-top: 10px;
+}
+.update-btn {
+  margin: 5px;
+  border: navajowhite;
+  background: grey;
+  color: white;
+  border-radius: 4px;
+}
