@@ -1,12 +1,12 @@
 import "bootstrap/dist/css/bootstrap.css";
 import { useState } from "react";
 import { ITodo } from "./types";
-
+import { useEffect } from "react";
 import TodoList from "./components/TodoList";
 import AddTodo from "./components/AddTodo";
 
 function App() {
-  const [todos, setTodos] = useState<ITodo[]>([]);
+  const [todos, setTodos] = useState<ITodo[]>(getlocal());
 
   function onTodoAdd(str: string) {
     const obj: ITodo = {
@@ -51,6 +51,19 @@ function App() {
     }
     setTodos(newTodos);
   }
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  });
+  function getlocal(): ITodo[] {
+    const initialtodos = localStorage.getItem("todos");
+    if (initialtodos) {
+      return JSON.parse(initialtodos);
+    } else {
+      return [];
+    }
+  }
+
   return (
     <div className="">
       <h1 className="todo-title">My Todos</h1>
@@ -67,15 +80,3 @@ function App() {
 }
 
 export default App;
-
-// const updatelike = (id) => {
-//   if (editText !== "") {
-//     const updatedlikes = likes.map((like) =>
-//       like.id === id ? { ...like, text: editText } : like
-//     );
-
-//     setlikes(updatedlikes);
-//     setEditIndex();
-//     setEditText("");
-//   }
-// };

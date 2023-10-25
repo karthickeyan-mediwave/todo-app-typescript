@@ -8,6 +8,7 @@ interface ITodoList {
   handleEdit: (n: Number) => void;
   handleUpdate: (n: Number, t: string) => void;
   handleStrike: (n: Number, t: string) => void;
+  deletetodo?: (n: Number) => void;
 }
 
 const TodoList: React.FC<ITodoList> = ({
