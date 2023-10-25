@@ -10,10 +10,7 @@ const EditTodo: React.FC<IEditTodo> = ({ item, handleSave }) => {
 
   return (
     <>
-      <form
-        className="input-group-text col-sm-6"
-        onSubmit={() => handleSave(item.id, editValue)}
-      >
+      <form className="" onSubmit={() => handleSave(item.id, editValue)}>
         <input
           id={`text-${item.id}`}
           type="text"

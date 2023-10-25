@@ -40,7 +40,7 @@ const TodoList: React.FC<ITodoList> = ({
               <EditTodo item={t} handleSave={handleSave} />
             </>
           ) : (
-            <div className="input-group-text justify-content-between mb-3 col-sm-6">
+            <div className="todolist">
               <input
                 type="checkbox"
                 // name={t.text}
@@ -55,17 +55,11 @@ const TodoList: React.FC<ITodoList> = ({
                 {t.text}
               </span>
               <div>
-                <button
-                  className="btn btn-outline-secondary btn-sm mx-2"
-                  onClick={() => handleDelete(t.id)}
-                >
-                  Delete
-                </button>
-                <button
-                  className="btn btn-outline-secondary btn-sm"
-                  onClick={() => handleEdit(t.id)}
-                >
+                <button className="" onClick={() => handleEdit(t.id)}>
                   Edit
+                </button>
+                <button className="" onClick={() => handleDelete(t.id)}>
+                  Delete
                 </button>
               </div>
             </div>

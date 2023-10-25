@@ -14,19 +14,19 @@ const AddTodo: React.FC<IAddTodo> = ({ onTodoAdd }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mb-4">
+    <form onSubmit={handleSubmit} className="">
       <label>
-        Enter Task Todo:
+        ADD TODO:
         <input
-          className="form-control"
+          className=""
           type="text"
           value={text}
           onChange={(e) => setText(e.target.value)}
           required
         />
       </label>
-      <button type="submit" className="btn btn-secondary mx-4">
-        Add Todo
+      <button type="submit" className="add-btn">
+        Add
       </button>
     </form>
   );
