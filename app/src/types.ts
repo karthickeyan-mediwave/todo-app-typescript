@@ -1,8 +1,6 @@
 export interface ITodo {
-  id: any;
+  id: Number;
   text: string;
-  isdone:boolean;
-  
-
+  isDone: boolean;
+  isEdit: boolean;
 }
-
